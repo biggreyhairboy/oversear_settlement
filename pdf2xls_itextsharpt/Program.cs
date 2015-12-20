@@ -28,7 +28,9 @@ namespace pdf2xls_itextsharpt
             //PdfWriter.GetInstance(doc, new System.IO.FileStream(@"d:\\settlement\\bills\\RSD20151120-51028B（追保用）.pdf", FileMode.Open));
 
             //PdfDocument pdfdoc = new PdfDocument("settlefile");
-            string FileName = @"RSD20151120-51028B（追保用）";
+            //string FileName = @"RSD20151120-51028B（追保用）";
+            string FileName = @"RSD20151120-51028D（追保用）";
+            
             PdfReader reader = new PdfReader(FileName + ".pdf");
 
             string text = string.Empty;
