@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-
+using System.Reflection;
+using log4net;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using iTextSharp.text.pdf.codec;
 using iTextSharp.text.pdf.parser;
 
-
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 namespace pdf2xls_itextsharpt
 {
     class Program
     {
         static void Main(string[] args)
         {
+            log4net.ILog log = log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+            log.Info("hello error");
             //Document doc = new Document();
             //PdfWriter.GetInstance(doc, new System.IO.FileStream(@"d:\\settlement\\bills\\RSD20151120-51028B（追保用）.pdf", FileMode.Open));
 
